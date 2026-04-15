@@ -1,7 +1,10 @@
 import React from 'react';
 import { FaRegClock, FaCarSide, FaWallet } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container mt-4">
       <style>
@@ -10,10 +13,10 @@ const Home = () => {
             min-height: 450px; 
             position: relative; 
             overflow: hidden;
-            background-color: #D39E00; /* ඔයා එවපු නිවැරදි Color Code එක */
+            background-color: #D39E00; 
           }
 
-          /* Mobile view එකේදී විතරක් පේන Blur Overlay එක */
+          /* Mobile view Blur Overlay */
           .hero-blur-overlay {
             display: none;
             position: absolute;
@@ -22,7 +25,7 @@ const Home = () => {
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom, rgba(211, 158, 0, 0.4), rgba(211, 158, 0, 0.8));
-            backdrop-filter: blur(4px); /* Blur එක අඩු කළා වාහනය පේන්න */
+            backdrop-filter: blur(4px);
             z-index: 2;
           }
 
@@ -43,7 +46,7 @@ const Home = () => {
               width: 130%;
               height: 100%;
               z-index: 1;
-              opacity: 0.9; /* වාහනය පැහැදිලිව පේන්න opacity වැඩි කළා */
+              opacity: 0.9;
             }
             .hero-car-image-wrapper img {
                 object-fit: contain;
@@ -61,7 +64,7 @@ const Home = () => {
           @media (min-width: 992px) {
             .hero-car-image-wrapper {
               z-index: 3;
-              transform: scale(1.5) translateX(20px); /* පින්තූරයේ තියෙන විදිහටම position කළා */
+              transform: scale(1.5) translateX(20px);
             }
           }
         `}
@@ -78,7 +81,11 @@ const Home = () => {
           <p className="lead text-dark mb-4 fw-medium" style={{ maxWidth: '400px' }}>
             Unlock the freedom of the road. Premium car rentals tailored for your travel needs at the best prices in town.
           </p>
-          <button className="btn btn-dark btn-lg px-5 rounded-pill shadow-lg border-0 fw-bold">
+          
+          <button 
+            className="btn btn-dark btn-lg px-5 rounded-pill shadow-lg border-0 fw-bold"
+            onClick={() => navigate('/cars')}
+          >
             Show Vehicles
           </button>
         </div>
@@ -99,24 +106,24 @@ const Home = () => {
       {/* Features Section */}
       <div className="row mt-5 py-4 text-center">
         <div className="col-md-4 mb-4 mb-md-0">
-          <div className="p-3 shadow-sm rounded-4 bg-white h-100">
-            <FaRegClock size={40} className="text-Dark mb-3" />
+          <div className="p-3 shadow-sm rounded-4 bg-white h-100 border">
+            <FaRegClock size={40} className="text-dark mb-3" />
             <h5 className="fw-bold">Availability</h5>
             <p className="text-muted small mb-0">Book your ride anytime, anywhere. Our support team is always here for you.</p>
           </div>
         </div>
         
         <div className="col-md-4 mb-4 mb-md-0">
-          <div className="p-3 shadow-sm rounded-4 bg-white h-100">
-            <FaCarSide size={40} className="text-Dark mb-3" />
+          <div className="p-3 shadow-sm rounded-4 bg-white h-100 border">
+            <FaCarSide size={40} className="text-dark mb-3" />
             <h5 className="fw-bold">Comfort</h5>
             <p className="text-muted small mb-0">Enjoy a smooth and premium driving experience with our well-maintained vehicles.</p>
           </div>
         </div>
 
         <div className="col-md-4">
-          <div className="p-3 shadow-sm rounded-4 bg-white h-100">
-            <FaWallet size={40} className="text-Dark mb-3" />
+          <div className="p-3 shadow-sm rounded-4 bg-white h-100 border">
+            <FaWallet size={40} className="text-dark mb-3" />
             <h5 className="fw-bold">Pocket-friendly</h5>
             <p className="text-muted small mb-0">Premium travel doesn't have to be expensive. Quality service at the most affordable prices.</p>
           </div>
