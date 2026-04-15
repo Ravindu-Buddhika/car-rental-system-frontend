@@ -31,9 +31,6 @@ const Navbar = ({ role }) => {
                   <Link className="nav-link px-3 fw-medium text-dark" to="/cars">Vehicle</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link px-3 fw-medium text-dark" to="/details">Details</Link>
-                </li>
-                <li className="nav-item">
                   <Link className="nav-link px-3 fw-medium text-dark" to="/about">About us</Link>
                 </li>
                 <li className="nav-item">
