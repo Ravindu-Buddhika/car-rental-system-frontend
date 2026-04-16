@@ -115,3 +115,108 @@
 }
 
 .rent-now-btn:hover { background: #e0a800; transform: scale(1.02); }
+
+.login-page {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background-color: #D39E00;
+    border-radius: 50%;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.login-car-img {
+    position: relative;
+    width: 120%;
+    z-index: 2;
+    transform: translateX(50px);
+}
+
+.shape-blob-1 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #D39E00;
+    border-radius: 50%;
+    bottom: -100px;
+    left: -100px;
+    opacity: 0.8;
+}
+
+.custom-input {
+    border-radius: 15px !important;
+    padding: 12px 20px !important;
+    border: 1.5px solid #e0e0e0 !important;
+    background-color: #fcfcfc !important;
+}
+
+.custom-input:focus {
+    border-color: #D39E00 !important;
+    box-shadow: 0 0 0 0.25rem rgba(211, 158, 0, 0.1) !important;
+}
+
+.login-btn {
+    background-color: #D39E00 !important;
+    border: none !important;
+    border-radius: 15px !important;
+    padding: 12px !important;
+    color: black !important;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #b88a00 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(211, 158, 0, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .login-form-container {
+        z-index: 5;
+    }
+}
+
+.custom-input {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.login-btn {
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #D39E00 !important;
+    border: none;
+}
+
+/* Input field එකේ ඇතුළේ ලියන text කළු කරන්න */
+.custom-input {
+    color: #333 !important; /* මේකෙන් text එක තද අළු/කළු පාට වෙනවා */
+    background-color: #fff !important; /* පසුබිම සුදුම වෙනවා */
+    border: 1px solid #ced4da;
+}
+
+/* Placeholder එකේ පාට වෙනස් කරන්න (අවශ්‍ය නම් පමණක්) */
+.custom-input::placeholder {
+    color: #7d7b6c;
+}
+
+/* Input එක ක්ලික් කළාම එන පාට පාලනය කරන්න */
+.custom-input:focus {
+    color: #000;
+    background-color: #fff;
+    border-color: #D39E00;
+    box-shadow: 0 0 0 0.25rem rgba(211, 158, 0, 0.25);
+}
