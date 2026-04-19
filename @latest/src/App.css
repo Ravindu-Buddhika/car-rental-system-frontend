@@ -1,0 +1,117 @@
+/* index.css */
+
+.custom-modal-overlay {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 99999 !important;
+  backdrop-filter: blur(10px);
+}
+
+.custom-modal-content {
+  background: #1e1e1e !important;
+  width: 90%;
+  max-width: 850px;
+  border-radius: 40px !important;
+  padding: 40px !important;
+  position: relative !important;
+  border: 1px solid #333;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+}
+
+.modal-title {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.modal-car-display {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.floating-car-img {
+  width: 450px !important;
+  position: absolute;
+  top: -80px;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.7));
+}
+
+.modal-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.section-label {
+  color: #666;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.icon-gold { color: #ffc107; font-size: 20px; }
+.label-gold { color: #ffc107; font-size: 10px; margin: 0; text-transform: uppercase; font-weight: bold; }
+.val-white { color: white; font-weight: 600; margin: 0; font-size: 15px; }
+
+.custom-input {
+  background: #111 !important;
+  border: 1px solid #333 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  font-size: 14px;
+}
+
+.price-summary {
+  background: #111;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+  border: 1px solid #222;
+}
+
+.rent-now-btn {
+  width: 100%;
+  background: #ffc107;
+  color: black;
+  font-weight: 800;
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.rent-now-btn:hover { background: #e0a800; transform: scale(1.02); }
